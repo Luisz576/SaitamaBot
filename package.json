@@ -1,0 +1,31 @@
+{
+  "name": "saitama",
+  "version": "1.0.0",
+  "description": "Luisz576 Api",
+  "main": "./src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luisz576/SaitamaBot.git"
+  },
+  "keywords": [
+    "saitama",
+    "bot",
+    "discord",
+    "js",
+    "javascript",
+    "luisz576",
+    "api"
+  ],
+  "author": "Luisz576",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Luisz576/SaitamaBot/issues"
+  },
+  "homepage": "https://github.com/Luisz576/SaitamaBot#readme",
+  "dependencies": {
+    "discord.js": "^14.11.0"
+  }
+}
