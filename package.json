@@ -1,31 +1,18 @@
 {
   "name": "saitama",
   "version": "1.0.0",
-  "description": "Luisz576 Api",
-  "main": "./src/app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Luisz576/SaitamaBot.git"
-  },
-  "keywords": [
-    "saitama",
-    "bot",
-    "discord",
-    "js",
-    "javascript",
-    "luisz576",
-    "api"
-  ],
+  "description": "Saitama Bot",
+  "main": "app.js",
+  "repository": "https://github.com/Luisz576/SaitamaBot",
   "author": "Luisz576",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Luisz576/SaitamaBot/issues"
+  "license": "MIT",
+  "scripts": {
+    "saitama-build": "tsc",
+    "saitama-ts": "ts-node-dev --respawn --transpile-only src/app.ts"
   },
-  "homepage": "https://github.com/Luisz576/SaitamaBot#readme",
-  "dependencies": {
-    "discord.js": "^14.11.0"
-  }
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.1.5"
+  },
+  "dependencies": {}
 }

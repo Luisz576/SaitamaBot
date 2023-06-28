@@ -1,5 +1,4 @@
 node_modules/
 imgs/
 configs/
-
-package-lock.json
+build/
