@@ -1,0 +1,5 @@
+TODO level <username (user linked)>
+TODO link <discord> <username>
+TODO skin <username (user linked)>
+TODO role <username (user linked)>
+TODO statistics <Game> <All(default) | wins | kills | placed_blocks>
