@@ -7,12 +7,14 @@
   "author": "Luisz576",
   "license": "MIT",
   "scripts": {
-    "saitama-build": "tsc",
-    "saitama-ts": "ts-node-dev --respawn --transpile-only src/app.ts"
+    "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
+    "build": "tsc"
   },
   "devDependencies": {
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.1.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "discord.js": "^14.11.0"
+  }
 }

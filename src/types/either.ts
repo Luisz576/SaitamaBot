@@ -1,6 +1,6 @@
 export type Either<L, R> = Left<L, R> | Right<L, R>
 
-export class Left<L, R>{
+class Left<L, R>{
     value: L
     constructor(value: L){
         this.value = value
@@ -13,7 +13,7 @@ export class Left<L, R>{
     }
 }
 
-export class Right<L, R>{
+class Right<L, R>{
     value: R
     constructor(value: R){
         this.value = value
