@@ -1,4 +1,3 @@
-import {bot_token} from '../../configs/auth/bot_token.json'
 import { Client, Partials, IntentsBitField, BitFieldResolvable, GatewayIntentsString } from 'discord.js'
 
 class Saitama extends Client{
@@ -17,8 +16,10 @@ class Saitama extends Client{
         })
     }
     public init(){
-        this.login(bot_token)
+        this.login(process.env.BOT_TOKEN)
     }
 }
+
+export type ISaitama = Saitama
 
 export default new Saitama()

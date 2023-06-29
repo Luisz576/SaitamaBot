@@ -1,17 +1,17 @@
 interface IPlayerProfile {
-    username: String
-    skin: String
-    discord: String
-    networkxp: Number
-    role: Number
+    username: string
+    skin: string
+    discord: string
+    networkxp: number
+    role: number
 }
 
 export class PlayerProfile implements IPlayerProfile {
-    username: String
-    skin: String
-    discord: String
-    networkxp: Number
-    role: Number
+    username: string
+    skin: string
+    discord: string
+    networkxp: number
+    role: number
 
     constructor({username, skin, discord, role, networkxp}: IPlayerProfile){
         this.username = username

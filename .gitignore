@@ -1,3 +1,5 @@
 node_modules/
-configs/
 build/
+.env
+
+src/configs/

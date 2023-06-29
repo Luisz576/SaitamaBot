@@ -2,19 +2,20 @@
   "name": "saitama",
   "version": "1.0.0",
   "description": "Saitama Bot",
-  "main": "app.js",
+  "main": "build/app.js",
   "repository": "https://github.com/Luisz576/SaitamaBot",
   "author": "Luisz576",
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
-    "build": "tsc"
+    "build": "tsc && node ./build/src/app"
   },
   "devDependencies": {
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.1.5"
   },
   "dependencies": {
-    "discord.js": "^14.11.0"
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.3.1"
   }
 }
