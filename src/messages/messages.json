@@ -1,10 +1,21 @@
 {
     "player_profile_not_linked_with_discord": "Your profile isn't linked with your discord\nUse /link <username> and confirm in server",
+    "player_profile_is_already_linked_with_discord": {
+        "en": "Your profile is already linked with your discord\nUnlink using /unlink",
+        "pt": "<TODO>",
+        "es": "<TODO>"
+    },
     "hello_command_answer": {
         "en": "Hello World",
         "pt": "Olá Mundo",
         "es": "Hola Mundo"
     },
+    "link_command_answer": {
+        "en": "Profile linked",
+        "pt": "Perfil vinculado",
+        "es": "perfil vinculado"
+    },
+    "link_command_fail_answer": "Profile not linked",
     "role_command_answer": {
         "member": {
             "en": "Member",

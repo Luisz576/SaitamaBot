@@ -24,6 +24,19 @@ class Api{
             language: 1
         }));
     }
+    async linkDiscord({discord}: {discord: string}): Promise<Either<string, PlayerProfile>>{
+        if(false){
+            return left("Can't link discord")
+        }
+        return right(new PlayerProfile({
+            username: "Luisz576",
+            skin: "Luisz576",
+            role: 99,
+            discord: "Luisz576",
+            networkxp: 999999,
+            language: 1
+        }))
+    }
 }
 
 export default new Api()
