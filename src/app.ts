@@ -11,17 +11,6 @@ api.generateAcessToken().then((res) => {
         return
     }
 
-    // register events
-    saitama.on('ready', () => {
-        console.log("[Saitama] Estou online!")
-    })
-    
-    saitama.on('messageCreate', (message) => {
-        if(message.author.id == saitama.user?.id){ return }
-
-        
-    })
-
     // init bot
     saitama.init()
 })

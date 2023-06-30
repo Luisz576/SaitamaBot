@@ -1,0 +1,35 @@
+{
+    "player_profile_not_linked_with_discord": "Your profile isn't linked with your discord\nUse /link <username> and confirm in server",
+    "hello_command_answer": {
+        "en": "Hello World",
+        "pt": "Olá Mundo",
+        "es": "Hola Mundo"
+    },
+    "role_command_answer": {
+        "member": {
+            "en": "Member",
+            "pt": "Membro",
+            "es": "Miembro"
+        },
+        "sub": {
+            "en": "SUB",
+            "pt": "SUB",
+            "es": "SUB"
+        },
+        "vip": {
+            "en": "VIP",
+            "pt": "VIP",
+            "es": "VIP"
+        },
+        "mvp": {
+            "en": "MVP",
+            "pt": "MVP",
+            "es": "MVP"
+        },
+        "adm": {
+            "en": "ADM",
+            "pt": "ADM",
+            "es": "ADM"
+        }
+    }
+}

@@ -1,10 +1,12 @@
-import { ApplicationCommand, ButtonInteraction, Collection, CommandInteraction, CommandInteractionOptionResolver, ModalSubmitInteraction, StringSelectMenuInteraction } from 'discord.js'
+import { ApplicationCommandData, ButtonInteraction, Collection, CommandInteraction, CommandInteractionOptionResolver, ModalSubmitInteraction, StringSelectMenuInteraction } from 'discord.js'
 import {ISaitama} from '../services/saitama'
+import { PlayerProfile } from '../models/player_profile'
 
 interface CommandProps{
     client: ISaitama,
     interaction: CommandInteraction,
-    options: CommandInteractionOptionResolver
+    options: CommandInteractionOptionResolver,
+    player_profile: PlayerProfile | undefined
 }
 
 export type ComponentsButton = Collection<string, (iteraction: ButtonInteraction) => any>
@@ -14,10 +16,10 @@ export type ComponentsModal = Collection<string, (iteraction: ModalSubmitInterac
 interface CommandComponents{
     buttons?: ComponentsButton
     selects?: ComponentsSelection
-    modal?: ComponentsModal
+    modals?: ComponentsModal
 }
 
-export type CommandType = ApplicationCommand & CommandComponents & {
+export type CommandType = ApplicationCommandData & CommandComponents & {
     run(props: CommandProps): any
 }
 
