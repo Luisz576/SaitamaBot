@@ -1,4 +1,4 @@
-import { Event } from "../../types/event";
+import { Event } from "../types/event";
 
 export default new Event({
     name: "ready",

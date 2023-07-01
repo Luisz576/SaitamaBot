@@ -1,5 +1,5 @@
-import saitama from "../../services/saitama";
-import { Event } from "../../types/event";
+import saitama from "../services/saitama";
+import { Event } from "../types/event";
 
 export default new Event({
     name: "interactionCreate",

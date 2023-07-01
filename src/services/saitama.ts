@@ -46,29 +46,25 @@ class Saitama extends Client{
     private registerEvents(){
         // load events
         const eventsPath = path.join(__dirname, "..", "events")
-        // foreach events folder
-        fs.readdirSync(eventsPath).forEach(eventsFolder => {
-            // foreach filename
-            fs.readdirSync(`${eventsPath}/${eventsFolder}/`)
-                .filter(filterTsAndJs)
-                .forEach(async filename => {
-                    const { name, once, run }: EventType<keyof ClientEvents> = (await import(`../events/${eventsFolder}/${filename}`))?.default
-                    
-                    if(name){
-                        try{
-                            if(once){
-                                this.once(name, run)
-                            }else{
-                                this.on(name, run)
-                            }
-                            console.log(`✅ Event '${name}' from file '${filename}' registered`)
-                        }catch(err){
-                            console.log(`❌ Couln't load event '${name}'`)
-                            console.error(err)
+        // foreach event
+        fs.readdirSync(`${eventsPath}/`)
+            .filter(filterTsAndJs)
+            .forEach(async filename => {
+                const { name, once, run }: EventType<keyof ClientEvents> = (await import(`../events/${filename}`))?.default
+                if(name){
+                    try{
+                        if(once){
+                            this.once(name, run)
+                        }else{
+                            this.on(name, run)
                         }
+                        console.log(`✅ Event '${name}' from file '${filename}' registered`)
+                    }catch(err){
+                        console.log(`❌ Couln't load event '${name}'`)
+                        console.error(err)
                     }
-                })
-        })
+                }
+            })
     }
 
     private loadModules(){

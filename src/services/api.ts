@@ -1,3 +1,4 @@
+import Punishment from '../domain/punishment'
 import { PlayerProfile } from '../models/player_profile'
 import { Either, left, right } from "../types/either"
 
@@ -19,8 +20,8 @@ class Api{
             role: 99,
             discord: "Luisz576",
             networkxp: 999999,
-            language: 1
-        }));
+            language: 2
+        }))
     }
     async linkDiscord({player_profile_username, discord_name, discord_id}: {player_profile_username: string, discord_name: string, discord_id: string}): Promise<Either<string, PlayerProfile>>{
         if(false){
@@ -32,7 +33,7 @@ class Api{
             role: 99,
             discord: discord_name,
             networkxp: 999999,
-            language: 1
+            language: 2
         }))
     }
     async unlinkDiscord({discord_name}: {discord_name: string}): Promise<Either<string, null>>{
@@ -46,6 +47,18 @@ class Api{
     }
     async loadGameProfileStatistics({discord_name}: {discord_name: string}){
 
+    }
+    async givePunishment({punishment}: {punishment: Punishment}): Promise<Either<string, null>>{
+        if(false){
+            return left("")
+        }
+        return right(null)
+    }
+    async pardonAll({username}: {username: string}): Promise<Either<string, null>>{
+        if(false){
+            return left("")
+        }
+        return right(null)
     }
 }
 

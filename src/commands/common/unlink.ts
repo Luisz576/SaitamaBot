@@ -8,14 +8,9 @@ export default new Command({
     name: "unlink",
     description: "unlink your discord account",
     type: ApplicationCommandType.ChatInput,
+    logged_command: true,
     run({player_profile, interaction}) {
-        if(!player_profile){
-            interaction.reply({
-                ephemeral: true,
-                content: player_profile_not_linked_with_discord
-            })
-            return
-        }
+        if(!player_profile){return}
         interaction.reply({
             ephemeral: true,
             content: unlink_command_answer.message_asking_to_confirm[getLanguage(player_profile.language)],

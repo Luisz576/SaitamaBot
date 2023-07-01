@@ -1,6 +1,7 @@
 {
+    "command_only_logged": "You need be logged to use this command",
     "player_profile_not_linked_with_discord": "⚠️ Your profile isn't linked with your discord\nUse /link <username> and confirm in server",
-    "error_loading_dara": "❌ Error loading data",
+    "error_loading_data": "❌ Error loading data",
     "invalid_parameter_was_passed": "⚠️ Invalid parameter(s) passed",
     "player_profile_is_already_linked_with_discord": {
         "en": "⚠️ Your profile is already linked with your discord\nUnlink using /unlink",
@@ -58,5 +59,20 @@
             "pt": "Confirmar",
             "es": "Confirmar"
         }
+    },
+    "player_isnt_adm": {
+        "en": "You aren't a ADM",
+        "pt": "Você não é um ADM",
+        "es": "No eres un ADM"
+    },
+    "punishment_command_success": {
+        "en": "✅ The punishment was give to player",
+        "pt": "✅ O punimento foi dado ao jogador",
+        "es": "✅ El castigo fue dado al jugador"
+    },
+    "pardonall_command_success": {
+        "en": "✅ The player was pardoned",
+        "pt": "✅ O jogador foi perdoado",
+        "es": "✅ El jugador fue indultado"
     }
 }

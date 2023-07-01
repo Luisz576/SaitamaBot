@@ -20,6 +20,8 @@ interface CommandComponents{
 }
 
 export type CommandType = ApplicationCommandData & CommandComponents & {
+    readonly logged_command?: boolean
+    readonly adm_command?: boolean
     run(props: CommandProps): any
 }
 

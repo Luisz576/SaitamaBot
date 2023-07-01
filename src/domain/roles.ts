@@ -1,5 +1,9 @@
 export type Role = 'member' | 'sub' | 'vip' | 'mvp' | 'adm'
 
+export function isAdm(id: number){
+    return id == 99
+}
+
 export function getRole(id: number | undefined, default_return: Role = 'member'): Role{
     if(!id) return default_return
     switch(id){

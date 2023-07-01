@@ -17,13 +17,8 @@ export default new Command({
             type: ApplicationCommandOptionType.String,
         }
     ],
+    logged_command: true,
     async run({interaction, player_profile, options}){
-        if(!player_profile){
-            return interaction.reply({
-                content: player_profile_not_linked_with_discord,
-                ephemeral: true
-            })
-        }
         //TODO
         interaction.reply({
             content: `[${options.getString('game')}]Comando não implementado :(`,
