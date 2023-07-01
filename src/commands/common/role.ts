@@ -6,19 +6,19 @@ import { Command } from "../../types/command";
 export default new Command({
     name: "role",
     description: "say your role",
-    run(props) {
-        if(!props.player_profile){
-            props.interaction.reply({
+    run({player_profile, interaction}) {
+        if(!player_profile){
+            interaction.reply({
                 ephemeral: true,
                 content: player_profile_not_linked_with_discord
             })
             return
         }
-        props.interaction.reply({
+        interaction.reply({
             ephemeral: true,
             content: role_command_answer
-                [getRole(props.player_profile.role)]
-                [getLanguage(props.player_profile.language)]
+                [getRole(player_profile.role)]
+                [getLanguage(player_profile.language)]
         })
     },
 })

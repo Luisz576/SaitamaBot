@@ -84,7 +84,6 @@ class Saitama extends Client{
                 .forEach(async filename => {
                     const command: CommandType = (await import(`../commands/${commandFolder}/${filename}`))?.default
                     const { name, buttons, selects, modals } = command
-
                     if(name){
                         // register command on bot
                         this.commands.set(name, command)
@@ -124,4 +123,5 @@ class Saitama extends Client{
 
 export type ISaitama = Saitama
 
-export default new Saitama()
+const saitama = new Saitama()
+export default saitama

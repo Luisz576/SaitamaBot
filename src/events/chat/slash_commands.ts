@@ -8,13 +8,13 @@ export default new Event({
     name: "interactionCreate",
     async run(interaction){
         if(!interaction.isCommand()){ return }
-
+        
         // get command
         const command = saitama.commands.get(interaction.commandName)
         if(!command){ return }
 
         // get player profile if linked
-        const response = await api.getPlayerProfile({discord: '<TODO>'})
+        const response = await api.getPlayerProfile({discord_id: interaction.user.id})
         let player_profile
         if(response.isRight()){
             player_profile = response.value as PlayerProfile

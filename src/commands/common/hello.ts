@@ -5,10 +5,10 @@ import { Command } from "../../types/command";
 export default new Command({
     name: "hello",
     description: "say Hello World",
-    run(props){
-        props.interaction.reply({
+    run({interaction, player_profile}){
+        interaction.reply({
             ephemeral: true,
-            content: hello_command_answer[getLanguage(props.player_profile?.language)]
+            content: hello_command_answer[getLanguage(player_profile?.language)]
         })
     }
 })

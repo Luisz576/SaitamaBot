@@ -10,9 +10,9 @@ class Api{
         }
         return right(null)
     }
-    async getPlayerProfile({discord}: {discord: string}): Promise<Either<string, PlayerProfile>>{
+    async getPlayerProfile({discord_id}: {discord_id: string}): Promise<Either<string, PlayerProfile>>{
         // TODO
-        if(false){
+        if(true){
             return left("Can't generate token")
         }
         return right(new PlayerProfile({
@@ -24,19 +24,20 @@ class Api{
             language: 1
         }));
     }
-    async linkDiscord({discord}: {discord: string}): Promise<Either<string, PlayerProfile>>{
-        if(false){
+    async linkDiscord({player_profile_username, discord_name, discord_id}: {player_profile_username: string, discord_name: string, discord_id: string}): Promise<Either<string, PlayerProfile>>{
+        if(true){
             return left("Can't link discord")
         }
         return right(new PlayerProfile({
-            username: "Luisz576",
-            skin: "Luisz576",
+            username: player_profile_username,
+            skin: discord_id,
             role: 99,
-            discord: "Luisz576",
+            discord: discord_name,
             networkxp: 999999,
             language: 1
         }))
     }
 }
 
-export default new Api()
+const api = new Api()
+export default api

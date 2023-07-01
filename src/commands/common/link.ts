@@ -1,31 +1,56 @@
 import { Command } from "../../types/command";
-import { link_command_fail_answer, link_command_answer, player_profile_is_already_linked_with_discord } from '../../messages/messages.json'
+import { invalid_parameter_was_passed, link_command_fail_answer, link_command_answer, player_profile_is_already_linked_with_discord } from '../../messages/messages.json'
 import { getLanguage } from "../../domain/languages";
 import api from "../../services/api";
+import { PlayerProfile } from "../../models/player_profile";
+import { ApplicationCommandOptionType, ApplicationCommandType } from "discord.js";
 
 export default new Command({
     name: "link",
+    type: ApplicationCommandType.ChatInput,
     description: "link you discord with your minecraft profile",
-    async run(props){
-        if(props.player_profile){
-            props.interaction.reply({
+    options: [
+        {
+            name: "username",
+            description: "your minecraft username",
+            type: ApplicationCommandOptionType.String,
+            required: true
+        }
+    ],
+    async run({player_profile, interaction, options}){
+        if(player_profile){
+            interaction.reply({
                 ephemeral: true,
-                content: player_profile_is_already_linked_with_discord[getLanguage(props.player_profile.language)]
+                content: player_profile_is_already_linked_with_discord[getLanguage(player_profile.language)]
             })
             return
         }
-        const discord = "Luisz576"//TODO
-        const response = await api.linkDiscord({discord})
+
+        const player_profile_username = options.getString('username')
+        if(player_profile_username == null){
+            interaction.reply({
+                ephemeral: true,
+                content: invalid_parameter_was_passed
+            })
+            return
+        }
+        
+        const response = await api.linkDiscord({
+            discord_name: interaction.user.username,
+            discord_id: interaction.user.id,
+            player_profile_username
+        })
         if(response.isLeft()){
-            props.interaction.reply({
+            console.error(response.value)
+            interaction.reply({
                 ephemeral: true,
                 content: link_command_fail_answer
             })
             return
         }
-        props.interaction.reply({
+        interaction.reply({
             ephemeral: true,
-            content: link_command_answer[getLanguage(response.value)]// TODO
+            content: link_command_answer[getLanguage((response.value as PlayerProfile).language)]
         })
-    }
+    },
 })
