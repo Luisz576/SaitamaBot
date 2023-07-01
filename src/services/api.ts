@@ -1,4 +1,3 @@
-import * as configs from '../configs/configs.json'
 import { PlayerProfile } from '../models/player_profile'
 import { Either, left, right } from "../types/either"
 

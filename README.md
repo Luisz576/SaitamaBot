@@ -4,6 +4,20 @@
 
 ---
 
+## Usage
+
+### For run Saitama you will need to use the following enviroment variables:
+
+<ul>
+    <li>BOT_TOKEN (your discord bot token)</li>
+    <li>API_CLIENT_SECRET (the api token)</li>
+    <li>API_URL (the api url)</li>
+</ul>
+
+You should see the how to implements the API ([Luisz576Api](https://github.com/Luisz576/Luisz576Api))
+
+---
+
 ## Community
 
 ### Join to our community using one of these links:
