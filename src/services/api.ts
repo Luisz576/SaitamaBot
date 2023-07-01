@@ -2,16 +2,15 @@ import { PlayerProfile } from '../models/player_profile'
 import { Either, left, right } from "../types/either"
 
 class Api{
+    //TODO
     async generateAcessToken(): Promise<Either<String, null>> {
-        // TODO
         if(false){
             return left("Can't generate token")
         }
         return right(null)
     }
     async getPlayerProfile({discord_id}: {discord_id: string}): Promise<Either<string, PlayerProfile>>{
-        // TODO
-        if(true){
+        if(false){
             return left("Can't generate token")
         }
         return right(new PlayerProfile({
@@ -24,7 +23,7 @@ class Api{
         }));
     }
     async linkDiscord({player_profile_username, discord_name, discord_id}: {player_profile_username: string, discord_name: string, discord_id: string}): Promise<Either<string, PlayerProfile>>{
-        if(true){
+        if(false){
             return left("Can't link discord")
         }
         return right(new PlayerProfile({
@@ -35,6 +34,12 @@ class Api{
             networkxp: 999999,
             language: 1
         }))
+    }
+    async unlinkDiscord({discord_name}: {discord_name: string}): Promise<Either<string, null>>{
+        if(false){
+            return left("Can't unlink discord")
+        }
+        return right(null)
     }
 }
 

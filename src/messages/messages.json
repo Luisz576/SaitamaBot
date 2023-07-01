@@ -43,5 +43,19 @@
             "pt": "ADM",
             "es": "ADM"
         }
+    },
+    "unlink_command_answer": {
+        "message_asking_to_confirm": {
+            "en": "⚠️ Are you sure you want unlink your Discord account?",
+            "pt": "⚠️ Tem certeza de que deseja desvincular sua conta do Discord?",
+            "es": "⚠️ Estás seguro de que quieres desvincular tu cuenta de Discord?"
+        },
+        "message_unlink_success": "✅ Discord Account unlinked",
+        "message_error_to_unlink": "❌ Couldn't unlink your Discord account\nPlease contact an ADM",
+        "button_confirm": {
+            "en": "Confirm",
+            "pt": "Confirmar",
+            "es": "Confirmar"
+        }
     }
 }

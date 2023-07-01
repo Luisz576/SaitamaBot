@@ -27,7 +27,7 @@ class Saitama extends Client{
                 Partials.Message,
                 Partials.Reaction,
                 Partials.ThreadMember,
-                Partials.User
+                Partials.User,
             ]
         })
     }
