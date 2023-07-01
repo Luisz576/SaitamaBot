@@ -1,5 +1,6 @@
 {
     "player_profile_not_linked_with_discord": "⚠️ Your profile isn't linked with your discord\nUse /link <username> and confirm in server",
+    "error_loading_dara": "❌ Error loading data",
     "invalid_parameter_was_passed": "⚠️ Invalid parameter(s) passed",
     "player_profile_is_already_linked_with_discord": {
         "en": "⚠️ Your profile is already linked with your discord\nUnlink using /unlink",

@@ -19,20 +19,18 @@ export default new Command({
     ],
     async run({player_profile, interaction, options}){
         if(player_profile){
-            interaction.reply({
+            return interaction.reply({
                 ephemeral: true,
                 content: player_profile_is_already_linked_with_discord[getLanguage(player_profile.language)]
             })
-            return
         }
 
         const player_profile_username = options.getString('username')
         if(player_profile_username == null){
-            interaction.reply({
+            return interaction.reply({
                 ephemeral: true,
                 content: invalid_parameter_was_passed
             })
-            return
         }
         
         const response = await api.linkDiscord({
@@ -42,11 +40,10 @@ export default new Command({
         })
         if(response.isLeft()){
             console.error(response.value)
-            interaction.reply({
+            return interaction.reply({
                 ephemeral: true,
                 content: link_command_fail_answer
             })
-            return
         }
         interaction.reply({
             ephemeral: true,

@@ -39,11 +39,10 @@ export default new Command({
             })
 
             if(response.isLeft()){
-                interaction.update({
+                return interaction.update({
                     content: unlink_command_answer.message_error_to_unlink,
                     components: []
                 })
-                return
             }
             interaction.update({
                 content: unlink_command_answer.message_unlink_success,

@@ -8,11 +8,10 @@ export default new Command({
     description: "say your role",
     run({player_profile, interaction}) {
         if(!player_profile){
-            interaction.reply({
+            return interaction.reply({
                 ephemeral: true,
                 content: player_profile_not_linked_with_discord
             })
-            return
         }
         interaction.reply({
             ephemeral: true,

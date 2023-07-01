@@ -41,6 +41,12 @@ class Api{
         }
         return right(null)
     }
+    async loadProfileStatistics({discord_name}: {discord_name: string}){
+
+    }
+    async loadGameProfileStatistics({discord_name}: {discord_name: string}){
+
+    }
 }
 
 const api = new Api()
